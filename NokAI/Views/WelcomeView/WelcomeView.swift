@@ -1,3 +1,10 @@
+//
+//  WelcomeView.swift
+//  NokAI
+//
+//  Created by Charlotte Lew on 6/30/25.
+//
+
 import SwiftUI
 
 struct WelcomeView: View {
@@ -7,9 +14,7 @@ struct WelcomeView: View {
     @State private var alertMessage = ""
     @State private var isLoggedIn = false
     @State private var showSignup = false
-
-    let authViewModel = AuthViewModel()
-
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -40,13 +45,18 @@ struct WelcomeView: View {
                         if username.isEmpty || password.isEmpty {
                             alertMessage = "Please enter a username and password"
                             showAlert = true
-                        } else if authViewModel.validateLogin(username: username, password: password) {
-                            UserDefaults.standard.set(username, forKey: "currentUsername")
-                            isLoggedIn = true
                         } else {
-                            alertMessage = "Please enter valid username and password"
-                            showAlert = true
+                            UserDataManager.shared.validateLogin(username: username, password: password) { success in
+                                if success {
+                                    UserDefaults.standard.set(username, forKey: "currentUsername")
+                                    isLoggedIn = true
+                                } else {
+                                    alertMessage = "Invalid username or password"
+                                    showAlert = true
+                                }
+                            }
                         }
+
                     }) {
                         Text("Log In")
                             .font(.custom("VT323", size: 22))
@@ -73,12 +83,12 @@ struct WelcomeView: View {
 
                     Spacer()
                 }
+                .ignoresSafeArea(.keyboard)
                 .padding()
             }
-            .ignoresSafeArea(.keyboard)
             .navigationBarHidden(true)
             .alert(isPresented: $showAlert) {
-                Alert(title: Text("Oops"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+                Alert(title: Text("Log in error"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
             }
             .background(
                 NavigationLink(destination: HomeView().navigationBarHidden(true)

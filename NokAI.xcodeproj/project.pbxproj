@@ -6,6 +6,28 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E41140B42E0CEFB6005749A1 /* AIAEC in Frameworks */ = {isa = PBXBuildFile; productRef = E41140B32E0CEFB6005749A1 /* AIAEC */; };
+		E41140B62E0CEFB6005749A1 /* AIAECLL in Frameworks */ = {isa = PBXBuildFile; productRef = E41140B52E0CEFB6005749A1 /* AIAECLL */; };
+		E41140B82E0CEFB6005749A1 /* AINS in Frameworks */ = {isa = PBXBuildFile; productRef = E41140B72E0CEFB6005749A1 /* AINS */; };
+		E41140BA2E0CEFB6005749A1 /* AINSLL in Frameworks */ = {isa = PBXBuildFile; productRef = E41140B92E0CEFB6005749A1 /* AINSLL */; };
+		E41140BC2E0CEFB6005749A1 /* AudioBeauty in Frameworks */ = {isa = PBXBuildFile; productRef = E41140BB2E0CEFB6005749A1 /* AudioBeauty */; };
+		E41140BE2E0CEFB6005749A1 /* ClearVision in Frameworks */ = {isa = PBXBuildFile; productRef = E41140BD2E0CEFB6005749A1 /* ClearVision */; };
+		E41140C02E0CEFB6005749A1 /* ContentInspect in Frameworks */ = {isa = PBXBuildFile; productRef = E41140BF2E0CEFB6005749A1 /* ContentInspect */; };
+		E41140C22E0CEFB6005749A1 /* FaceCapture in Frameworks */ = {isa = PBXBuildFile; productRef = E41140C12E0CEFB6005749A1 /* FaceCapture */; };
+		E41140C42E0CEFB6005749A1 /* FaceDetection in Frameworks */ = {isa = PBXBuildFile; productRef = E41140C32E0CEFB6005749A1 /* FaceDetection */; };
+		E41140C62E0CEFB6005749A1 /* LipSync in Frameworks */ = {isa = PBXBuildFile; productRef = E41140C52E0CEFB6005749A1 /* LipSync */; };
+		E41140C82E0CEFB6005749A1 /* ReplayKit in Frameworks */ = {isa = PBXBuildFile; productRef = E41140C72E0CEFB6005749A1 /* ReplayKit */; };
+		E41140CA2E0CEFB6005749A1 /* RtcBasic in Frameworks */ = {isa = PBXBuildFile; productRef = E41140C92E0CEFB6005749A1 /* RtcBasic */; };
+		E41140CC2E0CEFB6005749A1 /* SpatialAudio in Frameworks */ = {isa = PBXBuildFile; productRef = E41140CB2E0CEFB6005749A1 /* SpatialAudio */; };
+		E41140CE2E0CEFB6005749A1 /* VideoAv1CodecDec in Frameworks */ = {isa = PBXBuildFile; productRef = E41140CD2E0CEFB6005749A1 /* VideoAv1CodecDec */; };
+		E41140D02E0CEFB6005749A1 /* VideoAv1CodecEnc in Frameworks */ = {isa = PBXBuildFile; productRef = E41140CF2E0CEFB6005749A1 /* VideoAv1CodecEnc */; };
+		E41140D22E0CEFB6005749A1 /* VideoCodecDec in Frameworks */ = {isa = PBXBuildFile; productRef = E41140D12E0CEFB6005749A1 /* VideoCodecDec */; };
+		E41140D42E0CEFB6005749A1 /* VideoCodecEnc in Frameworks */ = {isa = PBXBuildFile; productRef = E41140D32E0CEFB6005749A1 /* VideoCodecEnc */; };
+		E41140D62E0CEFB6005749A1 /* VirtualBackground in Frameworks */ = {isa = PBXBuildFile; productRef = E41140D52E0CEFB6005749A1 /* VirtualBackground */; };
+		E41140D82E0CEFB6005749A1 /* VQA in Frameworks */ = {isa = PBXBuildFile; productRef = E41140D72E0CEFB6005749A1 /* VQA */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		E411402E2E0B77B6005749A1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,9 +51,22 @@
 		E41140372E0B77B6005749A1 /* NokAIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NokAIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		E411410E2E0DF225005749A1 /* Exceptions for "NokAI" folder in "NokAI" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = E411401F2E0B77B5005749A1 /* NokAI */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		E41140222E0B77B5005749A1 /* NokAI */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E411410E2E0DF225005749A1 /* Exceptions for "NokAI" folder in "NokAI" target */,
+			);
 			path = NokAI;
 			sourceTree = "<group>";
 		};
@@ -52,6 +87,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E41140C82E0CEFB6005749A1 /* ReplayKit in Frameworks */,
+				E41140BE2E0CEFB6005749A1 /* ClearVision in Frameworks */,
+				E41140B62E0CEFB6005749A1 /* AIAECLL in Frameworks */,
+				E41140CC2E0CEFB6005749A1 /* SpatialAudio in Frameworks */,
+				E41140D82E0CEFB6005749A1 /* VQA in Frameworks */,
+				E41140C02E0CEFB6005749A1 /* ContentInspect in Frameworks */,
+				E41140C42E0CEFB6005749A1 /* FaceDetection in Frameworks */,
+				E41140D42E0CEFB6005749A1 /* VideoCodecEnc in Frameworks */,
+				E41140BA2E0CEFB6005749A1 /* AINSLL in Frameworks */,
+				E41140D62E0CEFB6005749A1 /* VirtualBackground in Frameworks */,
+				E41140D02E0CEFB6005749A1 /* VideoAv1CodecEnc in Frameworks */,
+				E41140CE2E0CEFB6005749A1 /* VideoAv1CodecDec in Frameworks */,
+				E41140B42E0CEFB6005749A1 /* AIAEC in Frameworks */,
+				E41140BC2E0CEFB6005749A1 /* AudioBeauty in Frameworks */,
+				E41140C62E0CEFB6005749A1 /* LipSync in Frameworks */,
+				E41140C22E0CEFB6005749A1 /* FaceCapture in Frameworks */,
+				E41140B82E0CEFB6005749A1 /* AINS in Frameworks */,
+				E41140D22E0CEFB6005749A1 /* VideoCodecDec in Frameworks */,
+				E41140CA2E0CEFB6005749A1 /* RtcBasic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +132,7 @@
 				E41140222E0B77B5005749A1 /* NokAI */,
 				E41140302E0B77B6005749A1 /* NokAITests */,
 				E411403A2E0B77B6005749A1 /* NokAIUITests */,
+				E41140B22E0CEFB6005749A1 /* Frameworks */,
 				E41140212E0B77B5005749A1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +145,13 @@
 				E41140372E0B77B6005749A1 /* NokAIUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		E41140B22E0CEFB6005749A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +174,25 @@
 			);
 			name = NokAI;
 			packageProductDependencies = (
+				E41140B32E0CEFB6005749A1 /* AIAEC */,
+				E41140B52E0CEFB6005749A1 /* AIAECLL */,
+				E41140B72E0CEFB6005749A1 /* AINS */,
+				E41140B92E0CEFB6005749A1 /* AINSLL */,
+				E41140BB2E0CEFB6005749A1 /* AudioBeauty */,
+				E41140BD2E0CEFB6005749A1 /* ClearVision */,
+				E41140BF2E0CEFB6005749A1 /* ContentInspect */,
+				E41140C12E0CEFB6005749A1 /* FaceCapture */,
+				E41140C32E0CEFB6005749A1 /* FaceDetection */,
+				E41140C52E0CEFB6005749A1 /* LipSync */,
+				E41140C72E0CEFB6005749A1 /* ReplayKit */,
+				E41140C92E0CEFB6005749A1 /* RtcBasic */,
+				E41140CB2E0CEFB6005749A1 /* SpatialAudio */,
+				E41140CD2E0CEFB6005749A1 /* VideoAv1CodecDec */,
+				E41140CF2E0CEFB6005749A1 /* VideoAv1CodecEnc */,
+				E41140D12E0CEFB6005749A1 /* VideoCodecDec */,
+				E41140D32E0CEFB6005749A1 /* VideoCodecEnc */,
+				E41140D52E0CEFB6005749A1 /* VirtualBackground */,
+				E41140D72E0CEFB6005749A1 /* VQA */,
 			);
 			productName = NokAI;
 			productReference = E41140202E0B77B5005749A1 /* NokAI.app */;
@@ -195,6 +276,9 @@
 			);
 			mainGroup = E41140172E0B77B5005749A1;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				E41140B12E0CEB01005749A1 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = E41140212E0B77B5005749A1 /* Products */;
 			projectDirPath = "";
@@ -400,6 +484,9 @@
 				DEVELOPMENT_TEAM = GTM3LKB9V2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NokAI/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need access to camera for video calls";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Need access to microphone for calls";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -428,6 +515,9 @@
 				DEVELOPMENT_TEAM = GTM3LKB9V2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NokAI/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need access to camera for video calls";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Need access to microphone for calls";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -558,6 +648,115 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E41140B12E0CEB01005749A1 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AgoraIO/AgoraRtcEngine_iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E41140B32E0CEFB6005749A1 /* AIAEC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E41140B12E0CEB01005749A1 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
+			productName = AIAEC;
+		};
+		E41140B52E0CEFB6005749A1 /* AIAECLL */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E41140B12E0CEB01005749A1 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
+			productName = AIAECLL;
+		};
+		E41140B72E0CEFB6005749A1 /* AINS */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E41140B12E0CEB01005749A1 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
+			productName = AINS;
+		};
+		E41140B92E0CEFB6005749A1 /* AINSLL */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E41140B12E0CEB01005749A1 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
+			productName = AINSLL;
+		};
+		E41140BB2E0CEFB6005749A1 /* AudioBeauty */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E41140B12E0CEB01005749A1 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
+			productName = AudioBeauty;
+		};
+		E41140BD2E0CEFB6005749A1 /* ClearVision */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E41140B12E0CEB01005749A1 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
+			productName = ClearVision;
+		};
+		E41140BF2E0CEFB6005749A1 /* ContentInspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E41140B12E0CEB01005749A1 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
+			productName = ContentInspect;
+		};
+		E41140C12E0CEFB6005749A1 /* FaceCapture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E41140B12E0CEB01005749A1 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
+			productName = FaceCapture;
+		};
+		E41140C32E0CEFB6005749A1 /* FaceDetection */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E41140B12E0CEB01005749A1 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
+			productName = FaceDetection;
+		};
+		E41140C52E0CEFB6005749A1 /* LipSync */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E41140B12E0CEB01005749A1 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
+			productName = LipSync;
+		};
+		E41140C72E0CEFB6005749A1 /* ReplayKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E41140B12E0CEB01005749A1 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
+			productName = ReplayKit;
+		};
+		E41140C92E0CEFB6005749A1 /* RtcBasic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E41140B12E0CEB01005749A1 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
+			productName = RtcBasic;
+		};
+		E41140CB2E0CEFB6005749A1 /* SpatialAudio */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E41140B12E0CEB01005749A1 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
+			productName = SpatialAudio;
+		};
+		E41140CD2E0CEFB6005749A1 /* VideoAv1CodecDec */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E41140B12E0CEB01005749A1 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
+			productName = VideoAv1CodecDec;
+		};
+		E41140CF2E0CEFB6005749A1 /* VideoAv1CodecEnc */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E41140B12E0CEB01005749A1 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
+			productName = VideoAv1CodecEnc;
+		};
+		E41140D12E0CEFB6005749A1 /* VideoCodecDec */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E41140B12E0CEB01005749A1 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
+			productName = VideoCodecDec;
+		};
+		E41140D32E0CEFB6005749A1 /* VideoCodecEnc */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E41140B12E0CEB01005749A1 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
+			productName = VideoCodecEnc;
+		};
+		E41140D52E0CEFB6005749A1 /* VirtualBackground */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E41140B12E0CEB01005749A1 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
+			productName = VirtualBackground;
+		};
+		E41140D72E0CEFB6005749A1 /* VQA */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E41140B12E0CEB01005749A1 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
+			productName = VQA;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E41140182E0B77B5005749A1 /* Project object */;
 }

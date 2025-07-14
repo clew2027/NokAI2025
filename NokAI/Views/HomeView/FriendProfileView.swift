@@ -1,9 +1,10 @@
 //
-//  FriendProfileViewController.swift
+//  FriendProfileView.swift
 //  NokAI
 //
 //  Created by Charlotte Lew on 6/30/25.
 //
+
 import SwiftUI
 import UIKit
 
@@ -90,20 +91,30 @@ struct FriendProfileView: View {
             loadFriendProfile()
         }
         .fullScreenCover(isPresented: $showVideoCall) {
-            VideoViewWrapper(
-                currentUsername: currentUsername,
-                peerUsername: friendUsername
-            )
+            VideoCallView(
+                    viewModel: VideoViewModelWrapper(
+                        currentUsername: currentUsername,
+                        peerUsername: friendUsername,
+                        channelName: "call-\(currentUsername)-\(friendUsername)"
+                    )
+                )
         }
     }
 
     private func loadFriendProfile() {
-        guard let user = UserDataManager.shared.fetchUser(byUsername: friendUsername) else { return }
-        name = user.name ?? "-"
         currentUsername = UserDefaults.standard.string(forKey: "currentUsername") ?? ""
 
-        if let data = user.profileImage, let img = UIImage(data: data) {
-            profileImage = img
+        UserDataManager.shared.fetchUser(byUsername: friendUsername) { userData in
+            guard let userData = userData else { return }
+
+            self.name = userData["name"] as? String ?? "-"
+
+            if let photoString = userData["profilePhoto"] as? String,
+               let base64 = UserDataManager.shared.extractBase64Data(from: photoString),
+               let data = Data(base64Encoded: base64),
+               let image = UIImage(data: data) {
+                self.profileImage = image
+            }
         }
     }
 
@@ -113,25 +124,14 @@ struct FriendProfileView: View {
 
     private func removeContact() {
         guard let fromUsername = UserDefaults.standard.string(forKey: "currentUsername") else { return }
-        UserDataManager.shared.removeFriend(fromUsername: fromUsername, friendUsername: friendUsername)
+
+            UserDataManager.shared.removeFriend(userA: fromUsername, userB: friendUsername) { success in
+                if success {
+                    showProfileView = false
+                    selectedUsername = nil
+                } else {
+                    print("❌ Failed to remove friend.")
+                }
+            }
     }
 }
-
-
-struct VideoViewWrapper: UIViewControllerRepresentable {
-    let currentUsername: String
-    let peerUsername: String
-
-    func makeUIViewController(context: Context) -> VideoViewController {
-        let vc = VideoViewController()
-        let channel = [currentUsername, peerUsername].sorted().joined(separator: "_")
-        vc.channelName = channel
-        vc.currentUsername = currentUsername
-        vc.peerUsername = peerUsername
-        return vc
-    }
-
-    func updateUIViewController(_ uiViewController: VideoViewController, context: Context) {}
-}
-
-

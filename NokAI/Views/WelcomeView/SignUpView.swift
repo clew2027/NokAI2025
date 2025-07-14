@@ -1,5 +1,5 @@
 //
-//  SignUpViewController.swift
+//  SignUpView.swift
 //  NokAI
 //
 //  Created by Charlotte Lew on 6/30/25.
@@ -18,7 +18,6 @@ struct SignupView: View {
     @State private var selectedImage = UIImage(systemName: "person.crop.circle.fill")!
     @State private var showImagePicker = false
 
-    let authViewModel = AuthViewModel()
     
     var body: some View {
         Group {
@@ -104,14 +103,27 @@ struct SignupView: View {
         } else if password != passwordAgain {
             alertMessage = "Passwords do not match"
             showAlert = true
-        } else if !authViewModel.doesThisUserExist(username: username) {
-            UserDataManager.shared.createUser(username: username, password: password, name: name, profileImage: selectedImage)
-            UserDefaults.standard.set(username, forKey: "currentUsername")
-            isSignedUp = true
-        } else {
-            alertMessage = "This username is already in use"
-            showAlert = true
         }
+        
+        UserDataManager.shared.doesThisUserExist(username: username) { exists in
+            if !exists {
+                UserDataManager.shared.createUser(username: username, password: password, name: name, profileImage: selectedImage) { success in
+                    if success {
+                        UserDefaults.standard.set(username, forKey: "currentUsername")
+                        isSignedUp = true
+                        print("✅ Signed up new user:", username)
+                        print("📍 reached line 112 SignupView")
+                    } else {
+                        alertMessage = "Signup failed"
+                        showAlert = true
+                    }
+                }
+            } else {
+                alertMessage = "This username is already in use"
+                showAlert = true
+            }
+        }
+
     }
 }
 

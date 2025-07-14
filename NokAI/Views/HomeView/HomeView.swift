@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  HomeView.swift
 //  NokAI
 //
 //  Created by Charlotte Lew on 6/30/25.
