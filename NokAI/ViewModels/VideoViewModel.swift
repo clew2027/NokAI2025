@@ -236,9 +236,6 @@ class VideoViewModel: NSObject,AgoraRtcEngineDelegate, AgoraAudioFrameDelegate {
             disconnectWebSocket()
         }
     }
-    
-    //Call History stuff here 
-
 
 }
 

@@ -10,7 +10,7 @@ import UIKit
 
 class FriendRequestManager {
     static let shared = FriendRequestManager()
-    private let baseURL = "http://192.168.1.158:3000" // change to your IP if needed
+    private let baseURL = "http://yourIP:3000" // change to your IP if needed
 
     private init() {}
 

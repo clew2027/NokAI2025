@@ -24,7 +24,7 @@ struct CallRecord: Decodable, Identifiable {
 class CallHistoryManager: ObservableObject {
     @Published var callHistory: [CallRecord] = []
     var currentUsername: String
-    private let baseURL = "http://192.168.1.158:3000" // or your IP on device
+    private let baseURL = "http://yourIP:3000" // or your IP on device
 
     init (currentUsername: String) {
         self.currentUsername = currentUsername

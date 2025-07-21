@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SignupView: View {
+    @Binding var isPresented: Bool
     @State private var username: String = ""
     @State private var password: String = ""
     @State private var passwordAgain: String = ""
@@ -37,13 +38,25 @@ struct SignupView: View {
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
+                Button(action: {
+                    isPresented = false
+                    print("trying to go back")
+                }) {
+                    HStack {
+                        Image(systemName: "chevron.left")
+                        Text("Back")
+                    }
+                    .font(.custom("VT323-Regular", size: 24))
+                    .foregroundColor(Color("AccentGreen"))
+                }
+                .padding(.top, -150)
+                .padding(.leading, -170)
                 Text("Let's get started")
                     .font(.custom("VT323", size: 48))
                     .foregroundColor(Color("AccentGreen"))
-                    .padding()
+                    .padding(.top, -30)
                 
                 Button(action: {
-                    showImagePicker = true
                 }) {
                     Image(uiImage: selectedImage)
                         .resizable()
@@ -79,20 +92,6 @@ struct SignupView: View {
         }
         .alert(isPresented: $showAlert) {
             Alert(title: Text("Error"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
-        }
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button(action: {
-                    // Replace with appropriate action if used outside NavigationView
-                }) {
-                    HStack {
-                        Image(systemName: "chevron.left")
-                        Text("Back")
-                    }
-                    .font(.custom("VT323", size: 24))
-                    .foregroundColor(Color("AccentGreen"))
-                }
-            }
         }
     }
     

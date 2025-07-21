@@ -26,6 +26,8 @@ struct HomeView: View {
                 Label("Profile", systemImage: "person.circle").font(.custom("VT323-Regular", size: 18))
             }
         }
+        .tint(Color("AccentPurple"))
     }
+    
 }
 

@@ -9,7 +9,7 @@ import UIKit
 
 class UserDataManager {
     static let shared = UserDataManager()
-    private let baseURL = "http://192.168.1.158:3000"
+    private let baseURL = "http://yourIP:3000"
 
     private init() {}
 
